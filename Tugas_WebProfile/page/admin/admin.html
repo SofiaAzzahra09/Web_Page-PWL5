@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link href="../../src/output.css" rel="stylesheet">
+    <script src="../../node_modules/preline/dist/preline.js"></script>
+    <script src="../../script/navbarAdmin.js" defer></script>
+</head>
+<body class="bg-gray-800 font-serif text-white">
+    <div class="flex">
+        <!-- Navbar -->
+        <aside class="fixed top-0 left-0 w-64 h-full bg-gray-900 shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50" id="navbar">
+            <div class="p-6 mt-12">
+                <div id="navbar-content"></div>
+            </div>
+        </aside>
+
+        <!-- Hamburger Button -->
+        <button class="fixed top-4 left-4 md:hidden bg-blue-600 text-white p-2 rounded z-50" onclick="toggleNavbar()">☰</button>
+
+        <main class="md:ml-64 p-6 w-full flex-grow">
+            <section id="admin-data" class="bg-gray-800 shadow-lg rounded-lg p-8">
+                <h2 class="text-center text-xl font-bold mb-6">Data Admin</h2>
+                <div class="mb-4">
+                    <h3 class="text-md">Nama: <span id="admin-name">Kelompok 5</span></h3>
+                    <h3 class="text-md">Email: <span id="admin-email">kelompok5@gmail.com</span></h3>
+                    <h3 class="text-md">Tanggal Bergabung: <span id="admin-join-date">1 Januari 2023</span></h3>
+                </div>
+            </section>
+
+            <section id="account-settings" class="bg-gray-800 shadow-lg rounded-lg p-8 mt-6">
+                <h2 class="text-2xl font-bold mb-6">Pengaturan Akun</h2>
+                <div class="mb-4">
+                    <p class="block text-lg">Username: <span id="username">-</span></p>
+                    <p class="block text-lg">Password: <span id="password">-</span></p>
+                </div>
+                <a href="#" class="mt-4 w-full inline-block text-center p-2 bg-blue-600 rounded text-white hover:bg-blue-700">Perbarui Akun</a>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

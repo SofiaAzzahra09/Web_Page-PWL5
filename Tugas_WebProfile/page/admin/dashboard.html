@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="../../src/output.css" rel="stylesheet">
+    <script src="../../node_modules/preline/dist/preline.js"></script>
+    <script src="../../script/navbarAdmin.js" defer></script>
+</head>
+<body class="bg-gray-800 font-serif text-white">
+    <div class="flex">
+        <!-- Navbar -->
+        <aside class="fixed top-0 left-0 w-64 h-full bg-gray-900 shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50" id="navbar">
+            <div class="p-6 mt-12">
+                <div id="navbar-content"></div>
+            </div>
+        </aside>
+
+        <!-- Hamburger Button -->
+        <button class="fixed top-4 left-4 md:hidden bg-blue-600 text-white p-2 rounded z-50" onclick="toggleNavbar()">☰</button>
+
+        <main class="md:ml-64 p-6 w-full flex-grow">
+            <h1 class="text-center text-2xl font-bold mb-8">Dashboard Admin</h1>
+            <div class="bg-gray-900 rounded-lg p-6 shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Selamat Datang, Admin!</h2>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

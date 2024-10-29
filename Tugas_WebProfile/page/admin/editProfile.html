@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Web Profile - Andrew Ng Profile</title>
+    <link href="../../src/output.css" rel="stylesheet">
+    <script src="../../node_modules/preline/dist/preline.js"></script>
+    <script src="../../script/navbarAdmin.js" defer></script>
+</head>
+<body class="bg-gray-800 font-serif text-white">
+    <div class="flex flex-col md:flex-row">
+         <!-- Navbar -->
+        <aside class="fixed top-0 left-0 w-64 h-full bg-gray-900 shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50" id="navbar">
+            <div class="p-6 mt-12">
+                <div id="navbar-content"></div>
+            </div>
+        </aside>
+
+        <!-- Hamburger Button -->
+        <button class="fixed top-4 left-4 md:hidden bg-blue-600 text-white p-2 rounded z-50" onclick="toggleNavbar()">☰</button>
+
+        <main class="md:ml-64 p-6 w-full flex-grow">
+            <section id="edit-profile" class="bg-gray-800 shadow-lg rounded-lg p-8">
+                <h2 class="text-center text-xl font-bold mb-6 text">Edit Konten Web Profile</h2>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold">Profil</h3>
+                    <label for="profile-title" class="block text-lg mt-4">Judul</label>
+                    <input type="text" id="profile-title" class="w-full p-2 rounded bg-gray-700 text-white" placeholder="Masukkan judul profil...">
+                    <label for="profile-description" class="block text-lg mt-4">Deskripsi</label>
+                    <textarea id="profile-description" class="w-full p-2 rounded bg-gray-700 text-white" rows="4" placeholder="Masukkan deskripsi profil..."></textarea>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold">Pendidikan</h3>
+                    <label for="education-title" class="block text-lg mt-4">Judul</label>
+                    <input type="text" id="education-title" class="w-full p-2 rounded bg-gray-700 text-white" placeholder="Masukkan judul pendidikan...">
+                    <label for="education-list" class="block text-lg mt-4">Daftar Pendidikan</label>
+                    <ul id="education-list" class="list-disc pl-6 space-y-2">
+                        <li><input type="text" class="w-full p-2 rounded bg-gray-700 text-white" placeholder="Masukkan item pendidikan..."></li>
+                    </ul>
+                    <button id="add-education" class="mt-2 p-2 bg-blue-600 rounded text-white" onclick="addEducation()">Tambah Item Pendidikan</button>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold">Karir</h3>
+                    <label for="career-title" class="block text-lg mt-4">Judul</label>
+                    <input type="text" id="career-title" class="w-full p-2 rounded bg-gray-700 text-white" placeholder="Masukkan judul karir...">
+                    <label for="career-description" class="block text-lg mt-4">Deskripsi</label>
+                    <textarea id="career-description" class="w-full p-2 rounded bg-gray-700 text-white" rows="4" placeholder="Masukkan deskripsi karir..."></textarea>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold">Penghargaan</h3>
+                    <label for="achievements-title" class="block text-lg mt-4">Judul</label>
+                    <input type="text" id="achievements-title" class="w-full p-2 rounded bg-gray-700 text-white" placeholder="Masukkan judul penghargaan...">
+                    <label for="achievements-list" class="block text-lg mt-4">Daftar Penghargaan</label>
+                    <ul id="achievements-list" class="list-disc pl-6 space-y-2">
+                        <li><input type="text" class="w-full p-2 rounded bg-gray-700 text-white" placeholder="Masukkan item penghargaan..."></li>
+                    </ul>
+                    <button id="add-achievement" class="mt-2 p-2 bg-blue-600 rounded text-white" onclick="addAchievement()">Tambah Item Penghargaan</button>
+                </div>
+
+                <button class="mt-4 p-2 bg-green-600 rounded text-white">Simpan</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
